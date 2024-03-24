@@ -30,10 +30,10 @@ const NavBar = () => {
                 <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')} >Home</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="/nosotros" className={'nav-link mx-3 '} >Nosotros</NavLink>
+                <NavLink to="/nosotros" className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')} >Nosotros</NavLink>
             </NavItem>
             <NavItem>
-                <Link to="/"  onMouseOver={() => { setColor("activeLink") } } onMouseLeave={() => { setColor("Link") }}  className={`nav-link mx-3 ${color}`}>Servicios</Link>
+                <NavLink to="/servicios"  className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')}>Servicios</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret onMouseOver={() => { setColor("activeLink") } } onMouseLeave={() => { setColor("Link") }}  className={`nav-link mx-3 ${color}`}>
