@@ -1,26 +1,76 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav, NavItem, NavLink, Navbar, NavbarBrand } from 'reactstrap';
+import React, {useEffect, useState} from 'react';
+import { Link, NavLink} from 'react-router-dom';
+import { Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    NavbarText } from 'reactstrap';
 
 const NavBar = () => {
-    return (
+    const [isOpen, setIsOpen] = useState(false);
+    const [color, setColor] = useState('Link');
+    const toggle = () => setIsOpen(!isOpen);
+    
 
-        <Navbar color="transparent" expand='lg' >
+    return (
+        <Navbar id='brandLogo' className='position-absolute w-100'color="transparent" expand='sm'>
+        <NavbarBrand href="/" className="logo">
+            <img src='src\assets\Logo_descriptivo.png' className="img-fluid"  />
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="me-auto align-items-end p-2" navbar>
+            <NavItem>
+                <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')} >Home</NavLink>
+            </NavItem>
+            <NavItem>
+                <NavLink to="/nosotros" className={'nav-link mx-3 '} >Nosotros</NavLink>
+            </NavItem>
+            <NavItem>
+                <Link to="/"  onMouseOver={() => { setColor("activeLink") } } onMouseLeave={() => { setColor("Link") }}  className={`nav-link mx-3 ${color}`}>Servicios</Link>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret onMouseOver={() => { setColor("activeLink") } } onMouseLeave={() => { setColor("Link") }}  className={`nav-link mx-3 ${color}`}>
+                proyectos
+              </DropdownToggle>
+              <DropdownMenu end>
+                <DropdownItem>Option 1</DropdownItem>
+                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>Reset</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </Nav>
+        </Collapse>
+      </Navbar >
+
+       /* <Navbar color="transparent" expand='lg' >
             <NavbarBrand>
-                <img src='src\assets\Logo_descriptivo.png' width='120px'/>
+                <img src='src\assets\Logo_descriptivo.png' width='80px' />
             </NavbarBrand>
-            <Nav>
-                <NavItem>
-                    <Link to="/" >Home</Link>
-                </NavItem>
-                <NavItem>
-                    <Link to="/" >Nosotros</Link>
-                </NavItem>
-                <NavItem>
-                    <Link to="/" >Servicios</Link>
-                </NavItem>
-            </Nav>
-        </Navbar>
+            <NavbarToggler onClick={toggleNavbar} />
+            <Collapse className='navbar-collapse'>
+                
+                <Nav>
+                    <NavItem>
+                        <Link to="/" >Home</Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link to="/" >Nosotros</Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link to="/" >Servicios</Link>
+                    </NavItem>
+                </Nav>
+            </Collapse>
+        </Navbar> */
+
     );
 }
 

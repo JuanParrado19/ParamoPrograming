@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './views/home'
+import Home from './views/Home'
 import NavBar from './components/NavBar'
 
 function App() {

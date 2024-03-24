@@ -1,1 +1,61 @@
+@font-face {
+    font-family: "Bau Haus";
+    src: url('/src/assets/Bauhaus-Regular.ttf') format('truetype');
+    
+  }
+#root{
+    font-family: 'Bau Haus';
+}
+  
+
+.linearGradient {
+    background: -webkit-linear-gradient(90deg, #000235 0%, #5C72D3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.NameLogo {
+    font-size: 7vw;
+  }
+
+.logo {
+    width: 8%;
+}
+.Link {
+    color: #000235 !important; 
+}
+.Link:hover {
+    color: #213ba7!important; 
+}
+.activeLink {
+    color: #213BA7!important;
+}
+.navlink:hover{
+    color: aliceblue;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 15%;
+    }
+}
+@media (max-width: 680px) {
+    .logo {
+        width: 20%;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        width: 25%;
+    }
+
+    #brandLogo {
+        color: white;
+        display: contents;
+    }
+}
+
+
 
