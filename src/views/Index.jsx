@@ -9,6 +9,9 @@ const Index = () => (
     <Container className='d-block p-0' style={{ maxWidth:'100%' }}>
         <Home />
         <About />
+        <About />
+        <About />
+        <About />
     </Container>
 );
     

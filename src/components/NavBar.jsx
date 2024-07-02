@@ -19,7 +19,7 @@ const NavBar = () => {
     
 
     return (
-        <Navbar id='brandLogo' className='position-absolute w-100'color="transparent" expand='sm'>
+        <Navbar id='brandLogo' className='position-fixed w-100' expand='sm'>
         <NavbarBrand href="/" className="logo">
             <img src='src\assets\Logo_descriptivo.png' className="img-fluid"  />
         </NavbarBrand>
@@ -33,7 +33,7 @@ const NavBar = () => {
                 <NavLink to="/nosotros" className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')} >Nosotros</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="/servicios"  className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')}>Servicios</NavLink>
+                <NavLink to="/Servicios"  className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')}>Servicios</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret onMouseOver={() => { setColor("activeLink") } } onMouseLeave={() => { setColor("Link") }}  className={`nav-link mx-3 ${color}`}>
