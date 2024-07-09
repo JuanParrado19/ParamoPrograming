@@ -35,6 +35,9 @@ const NavBar = () => {
             <NavItem>
                 <NavLink to="/Servicios"  className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')}>Servicios</NavLink>
             </NavItem>
+            <NavItem>
+                <NavLink to="/Contactanos"  className={({ isActive }) => (isActive ? 'nav-link mx-3  activeLink ' : 'nav-link mx-3 Link')}>Contactanos</NavLink>
+            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret onMouseOver={() => { setColor("activeLink") } } onMouseLeave={() => { setColor("Link") }}  className={`nav-link mx-3 ${color}`}>
                 proyectos

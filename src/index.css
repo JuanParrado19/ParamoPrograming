@@ -10,6 +10,13 @@
     font-family: 'Bau Haus';
 }
 
+.no-seleccionable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .bodytext {
     font-family: "Actor", sans-serif;
     font-weight: 400;

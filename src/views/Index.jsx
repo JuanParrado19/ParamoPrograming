@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Home from '../components/Home.jsx';
 import About from '../components/About.jsx';
 
