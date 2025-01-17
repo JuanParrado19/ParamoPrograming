@@ -1,0 +1,86 @@
+.custom-button {
+  border-radius: 20px;
+  background: rgba(93, 93, 93, 0.5);
+  box-shadow: -1px 79px 134.5px 0px rgba(0, 0, 0, 0.3);
+  height: 10vh;
+  border-width: 0rem;
+  transition: 500ms;
+  padding: 3%;
+}
+
+.custom-button.open {
+  background: #667bd1;
+  height: fit-content;
+}
+.custom-button.open:hover {
+  background: #667bd1;
+}
+
+.custom-button:hover {
+  background: rgba(151, 151, 151, 0.7);
+  transition: 1000ms;
+}
+
+/* AutoScroll Animation */
+.slider {
+  height: 
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+}
+
+.track-slider-auto {
+  display: flex;
+  animation: autoScroll 10s linear infinite;
+}
+
+.slide-image {
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: 10vw;
+}
+@keyframes autoScroll {
+  0% {
+    transform: translateX(calc(-25vw * 5));
+  }
+  100% {
+    transform: translateX(calc(-25vw * 5 * 2));
+  }
+}
+
+img {
+  width: 100%;
+}
+
+/* Tarjetas de Nosotros */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* Asegurar que el contenido no se salga del contenedor */
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel > div {
+  flex: 1 0 33%;
+  transition: transform 0.5s ease-in-out, flex 0.5s ease-in-out, max-width 0.5s ease-in-out;
+}
+
+.carousel > div.selected {
+  flex: 1 0 80%;
+  transform: scale(1.2); /* Aumentar el tamaño de la tarjeta seleccionada */
+}
+
+.carousel > div:not(.selected) {
+  transform: scale(1); /* Mantener el tamaño normal para las no seleccionadas */
+}
