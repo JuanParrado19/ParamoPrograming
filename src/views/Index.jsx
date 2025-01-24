@@ -1,19 +1,14 @@
-import React from 'react';
-import { Container } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Home from '../components/Home.jsx';
-import About from '../components/About.jsx';
-
+import React from "react";
+import { Container } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Home from "../components/Home.jsx";
+import Content from "../components/Content.jsx";
 
 const Index = () => (
-    <Container className='d-block p-0' style={{ maxWidth:'100%' }}>
-        <Home />
-        <About />
-        <About />
-        <About />
-        <About />
-    </Container>
+  <Container className="d-block p-0" style={{ maxWidth: "100%" }}>
+    <Home />
+    <Content />
+  </Container>
 );
-    
 
 export default Index;
