@@ -1,9 +1,8 @@
-import { Container } from "reactstrap";
 import "../uiKit.css";
 
 const AccordionButton = ({ label, isOpen, onClick, children }) => {
   return (
-    <Container className="d-flex flex-column">
+    <div className="d-flex flex-column">
       <button
         className={`custom-button ${isOpen ? "open" : ""}`}
         onClick={onClick}
@@ -22,7 +21,7 @@ const AccordionButton = ({ label, isOpen, onClick, children }) => {
           </div>
         )}
       </button>
-    </Container>
+    </div>
   );
 };
 

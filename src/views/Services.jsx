@@ -1,10 +1,9 @@
 import React from 'react';
-import { Container } from 'reactstrap';
 import Service from '../components/Service'
 
 
 const Services = () => (
-    <Container className='d-block p-0 pt-5' style={{ maxWidth: '100%' }}>
+    <div className='d-block p-0 pt-5' style={{ maxWidth: '100%' }}>
         <Service description="Our IT experts are delivering a range of IT services to our customers and alleviating technology
                 challenges regarding core IT infrastructure. We help you establish a reliable IT infrastructure."
             image="./src/assets/Service.jpeg"
@@ -26,7 +25,7 @@ const Services = () => (
              title="Seguridad Informática"
         />
 
-    </Container>
+    </div>
 );
 
 

@@ -1,9 +1,8 @@
-import { Container } from "reactstrap";
 import "../uiKit.css";
 
 const AccordionButton = () => {
   return (
-    <Container className="py-2 justify-content-center text-center">
+    <div className="py-2 justify-content-center text-center">
       <h4 className=" bodytext text-white">
         !No te preocupes si no sabes por donde empezar!
       </h4>
@@ -28,7 +27,7 @@ const AccordionButton = () => {
           </button>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 export default AccordionButton;

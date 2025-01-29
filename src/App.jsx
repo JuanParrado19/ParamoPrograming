@@ -8,6 +8,7 @@ import Index from "./views/Index.jsx";
 import Footer from "./components/Footer.jsx";
 import Services from "./views/Services.jsx";
 import Us from "./views/Us.jsx";
+import ScrollToTop from "./utils/ScrollToTop";
 
 library.add(faChevronDown);
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/Servicios" element={<Services />} />

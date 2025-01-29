@@ -23,7 +23,6 @@
 
 /* AutoScroll Animation */
 .slider {
-  height: 
   margin: auto;
   position: relative;
   width: 90%;
@@ -52,9 +51,6 @@
   }
 }
 
-img {
-  width: 100%;
-}
 
 /* Tarjetas de Nosotros */
 .carousel-container {

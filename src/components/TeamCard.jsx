@@ -1,64 +1,40 @@
 import React from "react";
-import {
-  Card,
-  CardBody,
-  CardSubtitle,
-  CardTitle,
-  CardImg,
-  CardText,
-} from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const TeamCard = ({ title, subtitle, imgSrc, text, isSelected }) => {
   return (
     <div>
-      <Card
-        className="text-white"
-        style={{
-          borderRadius: "15px",
-          margin: "10px",
-          backgroundColor: "#14266F",
-          cursor: "pointer",
-          width: "23vw",
-          boxShadow:
-            " 0px 20px 25px -5px rgba(0, 0, 0, 0.10), 0px 10px 10px 0px rgba(0, 0, 0, 0.04)",
-        }}
+      <div
+        className="text-white rounded-lg m-2.5 bg-blue-900 cursor-pointer w-1/4 shadow-lg"
       >
-        <CardImg
+        <img
           alt="Card image cap"
           src={imgSrc}
-          style={{
-            borderTopLeftRadius: "8px",
-            borderTopRightRadius: "8px",
-            margin: "1vw",
-            width: "92%",
-          }}
+          className="rounded-t-lg m-1 w-11/12"
         />
-        <CardBody>
-          <CardTitle tag="h5">{title}</CardTitle>
-          <CardSubtitle className="mb-2 bodytext" tag="h6">
-            {subtitle}
-          </CardSubtitle>
+        <div className="p-4">
+          <h5 className="text-xl font-bold">{title}</h5>
+          <h6 className="mb-2 text-lg">{subtitle}</h6>
           {isSelected && (
             <div>
-              <CardText className="bodytext">{text}</CardText>
-              <div style={{ display: "flex", justifyContent: "flex-start" }}>
+              <p className="text-base">{text}</p>
+              <div className="flex justify-start">
                 <FontAwesomeIcon
                   icon={faGithub}
                   size="2x"
-                  style={{ margin: "0 5px", color: "white" }}
+                  className="mx-1 text-white"
                 />
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   size="2x"
-                  style={{ margin: "0 5px", color: "white" }}
+                  className="mx-1 text-white"
                 />
               </div>
             </div>
           )}
-        </CardBody>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };
