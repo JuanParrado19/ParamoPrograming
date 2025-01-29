@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
+@import "tailwindcss";
+
+
+
 @font-face {
     font-family: "Bau Haus";
     src: url('/src/assets/Bauhaus-Regular.ttf') format('truetype');
 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
 
 #root {
     font-family: 'Bau Haus';

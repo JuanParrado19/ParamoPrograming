@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Container, Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
@@ -67,7 +66,7 @@ const Team = () => {
           paddingBottom: "2vw",
         }}
       >
-        <Button
+        <button
           onClick={handlePrevClick}
           style={{
             display: "flex",
@@ -80,7 +79,7 @@ const Team = () => {
             size="2xl"
             style={{ color: "#ffffff" }}
           />
-        </Button>
+        </button>
         <div
           className="carousel"
           style={{
@@ -111,7 +110,7 @@ const Team = () => {
             />
           ))}
         </div>
-        <Button
+        <button
           onClick={handleNextClick}
           style={{
             display: "flex",
@@ -124,7 +123,7 @@ const Team = () => {
             size="2xl"
             style={{ color: "#ffffff" }}
           />
-        </Button>
+        </button>
       </div>
     </div>
   );

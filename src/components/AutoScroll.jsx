@@ -1,16 +1,15 @@
-import { Container } from "reactstrap";
 import "../uiKit.css";
 
 const AutoScroll = () => {
   return (
     <div style={{ zIndex: "-1" }}>
-      <Container className="py-5 d-flex justify-content-center text-center">
+      <div className="py-5 d-flex justify-content-center text-center">
         <h5 className="text-white">
           Nuestras soluciones están desarrolladas utilizando las mejores
           frameworks y tecnologías del mercado
         </h5>
-      </Container>
-      <Container style={{ zIndex: "-1" }}>
+      </div>
+      <div style={{ zIndex: "-1" }}>
         <div className="slider ">
           <div className="track-slider-auto">
             <div className="slide-image">
@@ -96,7 +95,7 @@ const AutoScroll = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };

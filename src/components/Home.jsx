@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => (
@@ -10,7 +9,7 @@ const Home = () => (
     <video className="w-100" autoPlay muted loop style={{ zIndex: "-1" }}>
       <source src="src/assets/video/bgvideo.mp4" type="video/mp4" />
     </video>
-    <Container
+    <div
       className="container position-absolute"
       style={{ padding: "5vh", zIndex: "-1" }}
     >
@@ -23,7 +22,7 @@ const Home = () => (
       >
         ¡ Desarrollo de cima y a la medida !
       </p>
-      <Container className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         <a href="#start">
           <FontAwesomeIcon
             icon="chevron-down"
@@ -32,8 +31,8 @@ const Home = () => (
             style={{ color: "#ffffff" }}
           />
         </a>
-      </Container>
-    </Container>
+      </div>
+    </div>
   </section>
 );
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Container, Button } from "reactstrap";
 import "../uiKit.css";
 import AccordionButton from "./AccordionButton";
 import AutoScroll from "../components/AutoScroll.jsx";
@@ -25,15 +24,15 @@ const Content = () => {
       }}
     >
       <div className="d-flex py-4">
-        <Container>
-          <Container>
+        <div>
+          <div>
             <h5 className="text-white">
               Creemos una imagen digital <u>unica</u> a tu negocio que te ayude
               a crecer!
             </h5>
-          </Container>
+          </div>
 
-          <Container>
+          <div>
             <AccordionButton
               label="Landing page"
               isOpen={openIndex === 0}
@@ -73,9 +72,9 @@ const Content = () => {
                 atraer potenciales clientes o empleadores.
               </span>
             </AccordionButton>
-          </Container>
-        </Container>
-        <Container>
+          </div>
+        </div>
+        <div>
           <div style={{ position: "relative" }}>
             <img
               src="./src/assets/Browser.png"
@@ -109,7 +108,7 @@ const Content = () => {
               />
             </div>
           </div>
-        </Container>
+        </div>
       </div>
       <AutoScroll />
       <ContactUs />
