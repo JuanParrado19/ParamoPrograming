@@ -4,25 +4,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Home = () => (
   <section
     id="hero"
-    className="d-flex align-items-center justify-content-center"
+    className="flex items-center content-center justify-center"
   >
-    <video className="w-100" autoPlay muted loop style={{ zIndex: "-1" }}>
+    <video className="w-[100] h-[100] z-0" autoPlay muted loop style={{ zIndex: "-1" }}>
       <source src="src/assets/video/bgvideo.mp4" type="video/mp4" />
     </video>
     <div
-      className="container position-absolute"
-      style={{ padding: "5vh", zIndex: "-1" }}
+      className="absolute z-10 flex flex-col items-center justify-center"
+      style={{ padding: "5vh"}}
     >
       <h1 className="text-center linearGradient mb-0 NameLogo">
         PÁRAMO PROGRAMING
       </h1>
       <p
-        className="text-end mr-5 text-white html"
-        style={{ paddingRight: "3vw" }}
+        className="text-center text-white"
       >
         ¡ Desarrollo de cima y a la medida !
       </p>
-      <div className="d-flex justify-content-center">
+      <div className="mt-[3rem] animate-bounce">
         <a href="#start">
           <FontAwesomeIcon
             icon="chevron-down"
