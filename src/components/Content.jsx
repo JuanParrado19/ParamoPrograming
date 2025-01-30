@@ -17,6 +17,7 @@ const Content = () => {
   ];
   return (
     <section
+      id="start"
       className="py-5 align-items-center justify-content-center flex-row-reversed overflow-hidden"
       style={{
         background:
