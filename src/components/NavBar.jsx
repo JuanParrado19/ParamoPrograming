@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
+  
   return (
     <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 bg-white/50 backdrop-blur-md shadow-lg rounded-full px-3 py-2.5 z-50 w-[55%] flex items-center">
       {/* Logo */}
@@ -16,8 +17,8 @@ const NavBar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-blue-700 font-semibold"
-                : "hover:text-blue-500 transition"
+                ? "text-paramo-300 font-semibold"
+                : "hover:text-blue-900 transition"
             }
           >
             Home
@@ -28,8 +29,8 @@ const NavBar = () => {
             to="/Nosotros"
             className={({ isActive }) =>
               isActive
-                ? "text-blue-700 font-semibold"
-                : "hover:text-blue-500 transition"
+                ? "text-paramo-300 font-semibold"
+                : "hover:text-blue-700 transition"
             }
           >
             Nosotros
@@ -40,8 +41,8 @@ const NavBar = () => {
             to="/Servicios"
             className={({ isActive }) =>
               isActive
-                ? "text-blue-700 font-semibold"
-                : "hover:text-blue-500 transition"
+                ? "text-paramo-300 font-semibold"
+                : "hover:text-blue-700 transition"
             }
           >
             Servicios
@@ -52,8 +53,8 @@ const NavBar = () => {
             to="/Proyectos"
             className={({ isActive }) =>
               isActive
-                ? "text-blue-700 font-semibold"
-                : "hover:text-blue-500 transition"
+                ? "text-paramo-100 font-semibold"
+                : "hover:text-blue-700 transition"
             }
           >
             Proyectos

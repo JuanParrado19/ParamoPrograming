@@ -5,6 +5,7 @@
 
   --font-display: "Roboto" , sans-serif;
   
+  --color-paramo-hover: oklch(25% 0.0992 264.06);
   --color-paramo-100: oklch(14.34% 0.0992 264.06);
   --color-paramo-200: oklch(20% 0.0992 264.06);
   --color-paramo-300: oklch(30% 0.0992 264.06);
