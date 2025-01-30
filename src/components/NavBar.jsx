@@ -1,81 +1,65 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [color, setColor] = useState("Link");
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
-    <nav className="bg-white shadow-md fixed w-full z-30">
-      <div className="container mx-auto flex items-center justify-between p-4">
-        <div className="flex items-center">
-          <Link to="/" className="logo">
-            <img src="src/assets/Logo_descriptivo.png" className="h-10" alt="Logo" />
-          </Link>
-        </div>
-        <div className="block lg:hidden">
-          <button onClick={toggle} className="text-gray-500 focus:outline-none">
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
-        </div>
-        <div className={`w-full lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}>
-          <ul className="lg:flex lg:justify-end text-base text-gray-700">
-            <li className="nav-item">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? "nav-link mx-3 activeLink" : "nav-link mx-3 Link"
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/Nosotros"
-                className={({ isActive }) =>
-                  isActive ? "nav-link mx-3 activeLink" : "nav-link mx-3 Link"
-                }
-              >
-                Nosotros
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/Servicios"
-                className={({ isActive }) =>
-                  isActive ? "nav-link mx-3 activeLink" : "nav-link mx-3 Link"
-                }
-              >
-                Servicios
-              </NavLink>
-            </li>
-            <li className="relative group">
-              <button
-                onMouseOver={() => setColor("activeLink")}
-                onMouseLeave={() => setColor("Link")}
-                className={`nav-link mx-3 ${color}`}
-              >
-                Proyectos
-              </button>
-              <ul className="absolute hidden group-hover:block bg-white shadow-lg">
-                <li className="px-4 py-2 hover:bg-gray-200">
-                  <Link to="#">Option 1</Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-200">
-                  <Link to="#">Option 2</Link>
-                </li>
-                <li className="border-t px-4 py-2 hover:bg-gray-200">
-                  <Link to="#">Reset</Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 bg-white/50 backdrop-blur-md shadow-lg rounded-full px-3 py-2.5 z-50 w-[55%] flex items-center">
+      {/* Logo */}
+      <Link to="/" className="flex-shrink-0 ml-7 mr-2">
+        <img src="src/assets/Logo.png" className="h-8.5 w-auto" alt="Logo" />
+      </Link>
+
+      {/* Menú de navegación */}
+      <ul className="flex flex-1 justify-between text-sm text-gray-800 mx-9">
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-700 font-semibold"
+                : "hover:text-blue-500 transition"
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/Nosotros"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-700 font-semibold"
+                : "hover:text-blue-500 transition"
+            }
+          >
+            Nosotros
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/Servicios"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-700 font-semibold"
+                : "hover:text-blue-500 transition"
+            }
+          >
+            Servicios
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/Proyectos"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-700 font-semibold"
+                : "hover:text-blue-500 transition"
+            }
+          >
+            Proyectos
+          </NavLink>
+        </li>
+      </ul>
     </nav>
   );
 };
