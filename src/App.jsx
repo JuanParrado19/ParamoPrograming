@@ -9,6 +9,7 @@ import Footer from "./components/Footer.jsx";
 import Services from "./views/Services.jsx";
 import Us from "./views/Us.jsx";
 import ScrollToTop from "./utils/ScrollToTop";
+import Search from "./views/Search.jsx";
 
 library.add(faChevronDown);
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/Servicios" element={<Services />} />
         <Route path="/Nosotros" element={<Us />} />
+        <Route path="/Busqueda" element={<Search />} />
       </Routes>
       <Footer />
     </BrowserRouter>
