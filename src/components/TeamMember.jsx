@@ -3,7 +3,15 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const TeamMember = ({ name, role, image, description, linkedin, github }) => {
+const TeamMember = ({
+  name,
+  role,
+  image,
+  description,
+  linkedin,
+  github,
+  barcode,
+}) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -45,14 +53,16 @@ const TeamMember = ({ name, role, image, description, linkedin, github }) => {
         boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
       }}
     >
-      {/* Logo de Paramo en la esquina superior derecha */}
       <img
         src="src/assets/Logo_descriptivo.png"
         className="h-6 absolute top-4 right-4"
         alt="Logo Paramo"
       />
 
-      {/* Contenedor principal: Imagen y contenido */}
+      <div className="absolute bottom-4 right-4 flex flex-col items-end">
+        <img src={barcode} alt="Código de barras" className="h-8" />
+      </div>
+
       <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
         {/* Imagen */}
         <img
@@ -61,19 +71,15 @@ const TeamMember = ({ name, role, image, description, linkedin, github }) => {
           className="w-32 h-40 rounded-lg object-cover border-2 border-gray-200"
         />
 
-        {/* Contenido a la derecha */}
         <div className="text-left flex-1">
-          {/* Nombre y Rol */}
           <h3 className="text-xl font-bold text-gray-800">{name}</h3>
           <p className="text-gray-600">{role}</p>
           <p className="text-sm text-gray-500">Paramo Programming</p>
 
-          {/* Descripción */}
           <p className="font-sans text-gray-700 flex-1 sm:text-left">
             {description}
           </p>
 
-          {/* Botones de LinkedIn y GitHub (izquierda) */}
           <div className="flex justify-start items-center mt-6">
             <div className="flex space-x-4">
               <a
