@@ -2,14 +2,14 @@ import "../uiKit.css";
 
 const AutoScroll = () => {
   return (
-    <div style={{ zIndex: "-1" }}>
-      <div className="py-5 d-flex justify-content-center text-center">
-        <h5 className="text-white">
+    <div className="flex flex-col">
+      <div className="py-5 flex justify-center text-center">
+        <h5 className="text-white text-center p-4">
           Nuestras soluciones están desarrolladas utilizando las mejores
           frameworks y tecnologías del mercado
         </h5>
       </div>
-      <div style={{ zIndex: "-1" }}>
+      <div className="flex justify-center">
         <div className="slider ">
           <div className="track-slider-auto">
             <div className="slide-image">
