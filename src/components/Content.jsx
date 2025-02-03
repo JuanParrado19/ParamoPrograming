@@ -18,15 +18,11 @@ const Content = () => {
   return (
     <section
       id="start"
-      className="flex flex-row"
-      style={{
-        background:
-          "linear-gradient(180deg, #090D23 0%, #1D255C 17.63%, #2B3788 43.99%, #3948B3 69.5%, #4658DA 100%)",
-      }}
+      className="flex flex-row items-center h-[100vh]"
     >
       <div className="flex flex-row">
-        <div className="flex flex-col py-4">
-          <h5 className="text-white">
+        <div className="flex flex-col p-4">
+          <h5 className="text-white p-4">
             Creemos una imagen digital <u>unica</u> a tu negocio que te ayude
             a crecer!
           </h5>
@@ -70,43 +66,28 @@ const Content = () => {
             </span>
           </AccordionButton>
         </div>
-        <div className="flex flex-col">
-          <div style={{ position: "relative" }}>
+        <div className="flex justify-center flex-col">
+          <div className="relative">
             <img
               src="./src/assets/Browser.png"
-              className="img-fluid" //Poner position-absolute si queremos intentar sacar la imagen del contenedor
+              className="z-50" //Poner position-absolute si queremos intentar sacar la imagen del contenedor
               alt="Browser"
-              style={{ position: "absolute", display: "block", width: "100%" }}
             />
-            <div
+            <img
+              src={images[openIndex] ? images[openIndex] : images[0]}
+              className="absolute bottom-1 right-0 p-2 m-4" 
+              alt="Content"
               style={{
-                width: "92.8%",
-                height: "24.3vw",
-                top: "4vw",
-                left: "3.6%",
-                overflow: "hidden",
-                borderBottomLeftRadius: "0.2vw",
-                borderBottomRightRadius: "0.2vw",
+                width: "95%",
+                height: "83%",
+                objectFit: "cover",
+                objectPosition: "top",
+                transition: "opacity 0.3s ease-in-out",
               }}
-            >
-              <img
-                src={images[openIndex]}
-                className="flex"
-                alt="Content"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "top",
-                  transition: "opacity 0.3s ease-in-out",
-                }}
-              />
-            </div>
+            />
           </div>
         </div>
       </div>
-      <AutoScroll />
-      <ContactUs />
     </section>
   );
 };
