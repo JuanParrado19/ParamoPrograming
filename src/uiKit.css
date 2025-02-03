@@ -24,7 +24,6 @@
 /* AutoScroll Animation */
 .slider {
   margin: auto;
-  position: relative;
   width: 90%;
   display: grid;
   place-items: center;

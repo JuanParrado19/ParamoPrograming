@@ -6,6 +6,7 @@
   --font-display: "Roboto" , sans-serif;
   
   --color-paramo-hover: oklch(25% 0.0992 264.06);
+  
   --color-paramo-100: oklch(14.34% 0.0992 264.06);
   --color-paramo-200: oklch(20% 0.0992 264.06);
   --color-paramo-300: oklch(30% 0.0992 264.06);
@@ -15,7 +16,8 @@
   --color-paramo-700: oklch(70% 0.0992 264.06);
   --color-paramo-800: oklch(80% 0.0992 264.06);
   --color-paramo-900: oklch(90% 0.0992 264.06);
-  }
+ 
+}
 
 html {
     font-size: 1rem;
