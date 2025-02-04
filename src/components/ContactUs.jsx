@@ -1,33 +1,28 @@
 import "../uiKit.css";
 
-const AccordionButton = () => {
+const ContactUs = () => {
   return (
-    <div className="py-2 justify-content-center text-center">
-      <h4 className=" bodytext text-white">
-        !No te preocupes si no sabes por donde empezar!
+    <div className="flex flex-col py-4 m-4 justify-center text-center">
+      <h4 className="bodytext text-white mb-4">
+        ¡No te preocupes si no sabes por donde empezar!
       </h4>
-      <div className="d-flex  justify-content-center grid gap-5">
-        <div>
-          <button
-            style={{ width: "15vw" }}
-            className="custom-button text-white"
-            onClick={() => (window.location.href = "/contact")}
-          >
-            Contáctanos
-          </button>
-        </div>
-
-        <div>
-          <button
-            style={{ width: "15vw" }}
-            className="custom-button text-white"
-            onClick={() => (window.location.href = "/servicios")}
-          >
-            Servicios
-          </button>
-        </div>
+      <div className="flex flex-row justify-center m-4">
+        <button
+          style={{ width: "15vw" }}
+          className="custom-button text-white mr-2 flex items-center justify-center"
+          onClick={() => (window.location.href = "/contact")}
+        >
+          Contáctanos
+        </button>
+        <button
+          style={{ width: "15vw" }}
+          className="custom-button text-white flex items-center justify-center"
+          onClick={() => (window.location.href = "/servicios")}
+        >
+          Servicios
+        </button>
       </div>
     </div>
   );
 };
-export default AccordionButton;
+export default ContactUs;

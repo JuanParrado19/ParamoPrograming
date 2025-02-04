@@ -2,7 +2,7 @@ import "../uiKit.css";
 
 const AccordionButton = ({ label, isOpen, onClick, children }) => {
   return (
-    <div className="d-flex flex-column">
+    <div className="flex flex-col px-4 min-w-xl">
       <button
         className={`custom-button ${isOpen ? "open" : ""}`}
         onClick={onClick}
@@ -12,7 +12,7 @@ const AccordionButton = ({ label, isOpen, onClick, children }) => {
         {isOpen && (
           <div
             style={{
-              fontSize: "1.4vw",
+              fontSize: "1.2vw",
               lineHeight: "1.2",
               paddingTop: "0.6vw",
             }}
