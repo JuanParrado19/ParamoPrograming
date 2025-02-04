@@ -17,7 +17,10 @@
   --color-paramo-900: oklch(90% 0.0992 264.06);
 }
 
-html {
+html,
+body {
+  position: relative;
+  z-index: 0;
   font-size: 1rem;
 }
 
@@ -64,4 +67,34 @@ html {
   );
   background-size: 400% 400%;
   animation: moveBackground 15s ease infinite;
+}
+.stairs {
+  .transition-container {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: flex;
+    z-index: 100;
+    overflow: hidden;
+
+    div {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: oklch(14.34% 0.0992 264.06);
+    }
+  }
+  .backanimation {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-color: black;
+  }
 }
