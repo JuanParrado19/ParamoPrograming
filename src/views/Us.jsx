@@ -1,6 +1,7 @@
 import React from "react";
 import VideoUs from "../components/VideoUs";
 import TeamGrid from "../components/TeamGrid";
+import PageTransitions from "../components/PageTransitions";
 
 const teamMembers = [
   {
@@ -44,13 +45,15 @@ const teamMembers = [
 ];
 
 const Us = () => (
-  <div className="d-block p-0" style={{ maxWidth: "100%" }}>
-    <VideoUs />
-    <h2 className="text-4xl font-bold text-center my-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-      QUIENES SOMOS
-    </h2>
-    <TeamGrid teamMembers={teamMembers} />
-  </div>
+  <PageTransitions>
+    <div className="w-full">
+      <VideoUs />
+      <h2 className="text-4xl font-bold text-center my-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        QUIENES SOMOS
+      </h2>
+      <TeamGrid teamMembers={teamMembers} />
+    </div>
+  </PageTransitions>
 );
 
 export default Us;
