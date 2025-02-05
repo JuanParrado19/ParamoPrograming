@@ -4,11 +4,12 @@ import ContactUs from "../components/ContactUs.jsx";
 import Home from "../components/Home.jsx";
 import Content from "../components/Content.jsx";
 import PageTransitions from "../components/PageTransitions.jsx";
+import ContactUsForm from "../components/ContactUsForm.jsx";
 
 const Index = () => (
   <PageTransitions>
     <div
-      className="block p-0"
+      className="block pb-4"
       style={{
         maxWidth: "100%",
         background:
@@ -19,6 +20,7 @@ const Index = () => (
       <Content />
       <AutoScroll />
       <ContactUs />
+      <ContactUsForm />
     </div>
   </PageTransitions>
 );
