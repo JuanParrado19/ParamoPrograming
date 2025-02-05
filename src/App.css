@@ -5,7 +5,7 @@
   --font-display: "Roboto", sans-serif;
 
   --color-paramo-hover: oklch(25% 0.0992 264.06);
-  
+
   --color-paramo-100: oklch(14.34% 0.0992 264.06);
   --color-paramo-200: oklch(20% 0.0992 264.06);
   --color-paramo-300: oklch(30% 0.0992 264.06);
@@ -15,6 +15,58 @@
   --color-paramo-700: oklch(70% 0.0992 264.06);
   --color-paramo-800: oklch(80% 0.0992 264.06);
   --color-paramo-900: oklch(90% 0.0992 264.06);
+
+
+  --color-paramo-primary-900: oklch(10% 0.042 268.52);
+  --color-paramo-primary-700: oklch(33% 0.16 268.52);
+  --color-paramo-primary-600: oklch(33% 0.16 268.52);
+  --color-paramo-primary: oklch(44.16% 0.2135 268.52);
+  --color-paramo-primary-400: oklch(55.5% 0.19 268.52);
+  --color-paramo-primary-300: oklch(67% 0.136 268.52);
+  --color-paramo-primary-200: oklch(78.5% 0.084 268.52);
+  --color-paramo-primary-100: oklch(90% 0.033 268.52);
+
+  --color-paramo-secondary-900: oklch(10% 0.039 271.7);
+  --color-paramo-secondary-700: oklch(21.5% 0.096 271.7);
+  --color-paramo-secondary-600: oklch(33% 0.15 271.7);
+  --color-paramo-secondary-500: oklch(44.5% 0.202 271.7);
+  --color-paramo-secondary: oklch(52.48% 0.1981 271.7);
+  --color-paramo-secondary-300: oklch(67% 0.132 271.7);
+  --color-paramo-secondary-200: oklch(78.5% 0.081 271.7);
+  --color-paramo-secondary-100: oklch(90% 0.032 271.7);
+
+  --color-paramo-analogous-1-900: oklch(10% 0.015 238.83)
+  --color-paramo-analogous-1-700: oklch(21.5% 0.037 238.83);
+  --color-paramo-analogous-1-600: oklch(33% 0.058 238.83);
+  --color-paramo-analogous-1-500: oklch(44.5% 0.078 238.83);
+  --color-paramo-analogous-1-400: oklch(55.5% 0.097 238.83);
+  --color-paramo-analogous-1: oklch(68.09% 0.1197 238.83);
+  --color-paramo-analogous-1-200: oklch(78.5% 0.078 238.83);
+  --color-paramo-analogous-1-100: oklch(90% 0.031 238.83);
+
+  --color-paramo-analogous-2-900: oklch(10% 0.038 275.65);
+  --color-paramo-analogous-2-700: oklch(21.5% 0.093 275.65);
+  --color-paramo-analogous-2-600: oklch(33% 0.146 275.65);
+  --color-paramo-analogous-2-500: oklch(44.5% 0.196 275.65);
+  --color-paramo-analogous-2-400: oklch(55.5% 0.186 275.65);
+  --color-paramo-analogous-2: oklch(62.98% 0.1513 275.65);
+  --color-paramo-analogous-2-200: oklch(78.5% 0.082 275.65);
+  --color-paramo-analogous-2-100: oklch(90% 0.032 275.65);
+
+  --color-paramo-analogous-3-900: oklch(10% 0.034 295.78);
+  --color-paramo-analogous-3-700: oklch(21.5% 0.083 295.78);
+  --color-paramo-analogous-3-600: oklch(33% 0.13 295.78);
+  --color-paramo-analogous-3-500: oklch(44.5% 0.175 295.78);
+  --color-paramo-analogous-3: oklch(54.18% 0.2133 295.78);
+  --color-paramo-analogous-3-300: oklch(67% 0.15 295.78);
+  --color-paramo-analogous-3-200: oklch(78.5% 0.092 295.78);
+  --color-paramo-analogous-3-100: oklch(90% 0.036 295.78);
+
+
+  --color-paramo-warning: oklch(82.46% 0.1472 101.32);
+  --color-paramo-error: oklch(60.75% 0.1835 17.64);
+  --color-paramo-success: oklch(78.68% 0.2189 141.34);
+
 }
 
 html,

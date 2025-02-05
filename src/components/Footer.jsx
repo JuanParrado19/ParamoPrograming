@@ -33,6 +33,7 @@ const Footer = () => {
                 className="flex items-center justify-center md:justify-end *: hover:text-gray-400 transition-colors"
               >
                 <FontAwesomeIcon icon={faInstagram} className="w-5" />
+                @paramoprograming
               </a>
 
               <div className="flex flex-col space-y-1">
