@@ -52,8 +52,8 @@ const ContactUsForm = () => {
   }
 
   return (
-    <div className="w-full max-w-xl mx-auto drop-shadow-lg">
-      <form onSubmit={handleSubmit} className="bg-gradient-to-t from-paramo-secondary-300 via-paramo-analogous-3-400 to-paramo-analogous-3-600 shadow-md rounded-lg px-8 pt-6 pb-3 ">
+    <div className="w-full max-w-xl mx-auto drop-shadow-lg animate-wiggle">
+      <form onSubmit={handleSubmit} className="bg-conic-180 from-paramo-300 via-paramo-analogous-2-400 to-paramo-analogous-2-600 shadow-md rounded-lg px-8 pt-6 pb-3 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-white">Contáctanos</h2>
 
         <div className="mb-4">
@@ -143,7 +143,7 @@ const ContactUsForm = () => {
         <div className="flex items-center justify-center">
           <button
             type="submit"
-            className="bg-paramo-primary-600 hover:bg-paramo-primary font-display text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+            className="bg-paramo-analogous-2 hover:bg-paramo-primary font-display text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
             Enviar
           </button>
