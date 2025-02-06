@@ -4,6 +4,17 @@
 @theme {
   --font-display: "Roboto", sans-serif;
 
+  --animate-wiggle: wiggle 4s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-0.2deg);
+    }
+    50% {
+      transform: rotate(0.2deg);
+    }
+  }
+
   --color-paramo-hover: oklch(25% 0.0992 264.06);
 
   --color-paramo-100: oklch(14.34% 0.0992 264.06);
