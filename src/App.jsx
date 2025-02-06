@@ -12,6 +12,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import Search from "./views/Search.jsx";
 import { AnimatePresence } from "framer-motion";
 import { AnimationProvider } from "./utils/AnimationContext.jsx";
+import { ReactLenis } from "lenis/react";
 
 library.add(faChevronDown);
 
@@ -32,14 +33,16 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <AnimationProvider>
-      <BrowserRouter>
-        <NavBar />
-        <ScrollToTop />
-        <AnimatedRoutes />
-        <Footer />
-      </BrowserRouter>
-    </AnimationProvider>
+    <ReactLenis root>
+      <AnimationProvider>
+        <BrowserRouter>
+          <NavBar />
+          <ScrollToTop />
+          <AnimatedRoutes />
+          <Footer />
+        </BrowserRouter>
+      </AnimationProvider>
+    </ReactLenis>
   );
 }
 
