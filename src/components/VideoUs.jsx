@@ -19,8 +19,8 @@ const VideoUs = () => (
     </video>
 
     {/* Contenido de texto */}
-    <div className="relative z-10 flex justify-start p-8">
-      <div className="max-w-[50%]">
+    <div className="absolute top-30 sm:top-20 xl:top-50 z-20 flex justify-start p-8">
+      <div className="max-w-[100%] sm:max-w-[80%] md:max-w-[80%] lg:max-w-[30%] xl:max-w-[50%]">
         <h2 className="m-4 text-paramo-100 text-xl font-bold drop-shadow-xl">
           Llevando tu Empresa al Páramo de la Innovación
         </h2>
@@ -36,11 +36,13 @@ const VideoUs = () => (
     </div>
 
     {/* Imagen de la derecha */}
-    <img
-      src="./src/assets/imgUS.png"
-      className="absolute inset-y-0 right-0 h-full object-contain z-20" // Asegúrate de que la imagen esté por encima del video
-      alt="Imagen de Paramo"
-    />
+    <div className="absolute bottom-0 w-full flex justify-center md:justify-end">
+      <img
+        src="./src/assets/imgUS.png"
+        className="h-auto object-contain z-10 md:object-cover md:h-150 " // Asegúrate de que la imagen esté por encima del video
+        alt="Imagen de Paramo"
+      />
+    </div>
   </section>
 );
 
