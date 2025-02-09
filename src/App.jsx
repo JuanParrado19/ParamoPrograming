@@ -45,5 +45,4 @@ function App() {
     </ReactLenis>
   );
 }
-
 export default App;

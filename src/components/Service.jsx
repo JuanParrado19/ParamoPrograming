@@ -1,22 +1,21 @@
 import React from "react";
 
-const Service = ({ description, image, alignment, title }) => {
-  const alignmentClass =
-    alignment === "right" ? "flex-row" : "flex-row-reverse";
-
+const Service = ({ imageSrc, title, description, imagePosition }) => {
   return (
-    <section
-      id="start"
-      className={`d-flex pb-5 align-items-center justify-content-center bg-white ${alignmentClass}`}
+    <div
+      className={`flex flex-wrap items-center my-8 ${
+        imagePosition === "left" ? "flex-row" : "flex-row-reverse"
+      }`}
     >
-      <div>
-        <h1 className="text-dark py-5">{title}</h1>
-        <p className="bodytext">{description}</p>
+      <div className="w-32 md:w-1/3 p-2">
+        <img src={imageSrc} alt={title} className="w-full h-auto rounded-lg" />
       </div>
-      <div>
-        <img src={image} className="img-fluid" />
+
+      <div className="w-full md:w-2/3 p-2">
+        <h2 className="text-xl font-bold mb-2">{title}</h2>
+        <p className="text-gray-700 font-display">{description}</p>
       </div>
-    </section>
+    </div>
   );
 };
 
