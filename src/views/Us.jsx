@@ -16,7 +16,7 @@ const teamMembers = [
   {
     name: "Iván Guitierrez",
     role: "Desarrollador Backend",
-    image: "src/assets/FotoIvan.jpeg",
+    image: "src/assets/FotoCesar.jpeg",
     description: "Experto en arquitectura de servidores y bases de datos.",
     linkedin: "https://www.linkedin.com/in/ivan-alejandro-gutierrez-espinosa/",
     github: "https://github.com/IvanGutierrez10",
