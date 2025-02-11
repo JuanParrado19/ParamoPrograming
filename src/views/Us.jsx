@@ -2,6 +2,7 @@ import React from "react";
 import VideoUs from "../components/VideoUs";
 import TeamGrid from "../components/TeamGrid";
 import PageTransitions from "../components/PageTransitions";
+import OurCompany from "../components/OurCompany";
 
 const teamMembers = [
   {
@@ -48,6 +49,7 @@ const Us = () => (
   <PageTransitions>
     <div className="w-full">
       <VideoUs />
+      <OurCompany />
       <h2 className="text-4xl font-bold text-center my-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
         QUIENES SOMOS
       </h2>
