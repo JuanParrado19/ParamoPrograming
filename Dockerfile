@@ -1,21 +1,27 @@
-FROM node:18-alpine as build
-
+# Use Node.js to build the React app
+FROM node:18 AS builder
 WORKDIR /app
 
-COPY package*.json ./
+# Copy package.json and install dependencies
+COPY package.json package-lock.json ./
+RUN npm install --frozen-lockfile
 
-RUN npm install
-
+# Copy the rest of the project files
 COPY . .
 
+# Build the React app
 RUN npm run build
 
-FROM nginx:latest as prod
+# Use Nginx to serve the built React app
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-# Copy the React app build files to the container
-COPY --from=build /app/dist /usr/share/nginx/html
+# Remove default Nginx files and copy the built React app
+RUN rm -rf ./*
+COPY --from=builder /app/build .
 
-EXPOSE 80/tcp
+# Expose port 80
+EXPOSE 80
 
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
