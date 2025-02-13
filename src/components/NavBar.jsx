@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import logo from "../assets/Logo.png";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +14,7 @@ const NavBar = () => {
     <nav className="fixed top-2 xl:top-2 left-1/2 transform -translate-x-1/2 bg-white/50 backdrop-blur-md shadow-lg rounded-full px-3 py-2.5 xl:py-2.5 z-50 w-[60%] xl:w-[60%] flex items-center">
       {/* Logo */}
       <Link to="/" className="flex items-center ml-2 xl:ml-7 mr-2">
-        <img
-          src="src/assets/Logo.png"
-          className="h-6 xl:h-8 w-auto"
-          alt="Logo"
-        />
+        <img src={logo} className="h-6 xl:h-8 w-auto" alt="Logo" />
       </Link>
 
       {/* Hamburger menu for mobile and tablet */}

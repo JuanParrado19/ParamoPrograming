@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import videohome from "../assets/video/bgvideo.mp4";
 
 const Home = () => {
   const handleScroll = () => {
@@ -21,7 +22,7 @@ const Home = () => {
         muted
         loop
       >
-        <source src="src/assets/video/bgvideo.mp4" type="video/mp4" />
+        <source src={videohome} type="video/mp4" />
       </video>
 
       <div className="absolute z-10 flex flex-col items-center justify-center text-center">
