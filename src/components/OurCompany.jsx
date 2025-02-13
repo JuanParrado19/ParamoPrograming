@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mountain, Code, Rocket, Users, Zap } from "lucide-react";
+import { Code, Rocket, Users, Zap } from "lucide-react";
 
 export default function ParamoProgramming() {
   const [activeSection, setActiveSection] = useState("values");

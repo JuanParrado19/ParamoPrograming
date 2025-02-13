@@ -1,24 +1,34 @@
-# Use Node.js to build the React app
 FROM node:18 AS builder
+
+# Set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
+# Copy package.json and package-lock.json first
 COPY package.json package-lock.json ./
-RUN npm install --frozen-lockfile
 
-# Copy the rest of the project files
+# Install dependencies
+RUN npm install
+
+# Copy all project files
 COPY . .
 
-# Build the React app
-RUN npm run build
+# Set environment variable to production
+ENV NODE_ENV=production
 
-# Use Nginx to serve the built React app
+# Build the Vite app (outputs to dist, not build)
+RUN npm run build && ls -la /app/dist
+
+# Step 2: Use Nginx to serve the Vite build files
 FROM nginx:latest
+
+# Set working directory inside Nginx
 WORKDIR /usr/share/nginx/html
 
-# Remove default Nginx files and copy the built React app
+# Remove default Nginx static files
 RUN rm -rf ./*
-COPY --from=builder /app/build .
+
+# Copy the built Vite app from the builder stage
+COPY --from=builder /app/dist ./
 
 # Expose port 80
 EXPOSE 80
