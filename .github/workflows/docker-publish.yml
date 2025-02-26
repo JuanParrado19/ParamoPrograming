@@ -22,9 +22,9 @@ jobs:
       - name: Build and tag Docker image
         run: |
           docker build -t paramoprograming/paramo-webpage:latest .
-          docker tag paramoprograming/paramo-webpage:latest paramoprograming/paramo-webpage:$(date +%Y%m%d%H%M%S)
+          docker tag paramoprograming/paramo-webpage:latest paramoprograming/paramo-webpage:$(date +%Y%m%d)
 
       - name: Push Docker image to Docker Hub
         run: |
           docker push paramoprograming/paramo-webpage:latest
-          docker push paramoprograming/paramo-webpage:$(date +%Y%m%d%H%M%S)
+          docker push paramoprograming/paramo-webpage:$(date +%Y%m%d)
