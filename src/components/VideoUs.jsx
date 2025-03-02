@@ -1,5 +1,5 @@
 import React from "react";
-import videoUs from "../assets/video/bgus.mp4";
+import videoUs from "../assets/video/bgUs.mp4";
 import imageUs from "../assets/imgUS.png";
 
 const VideoUs = () => (
