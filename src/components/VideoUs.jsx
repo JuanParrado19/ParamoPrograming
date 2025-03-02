@@ -1,4 +1,6 @@
 import React from "react";
+import videoUs from "../assets/video/bgus.mp4";
+import imageUs from "../assets/imgUS.png";
 
 const VideoUs = () => (
   <section
@@ -14,7 +16,7 @@ const VideoUs = () => (
       id="myVideo"
       style={{ zIndex: 0 }} // Asegúrate de que el video esté detrás de todo
     >
-      <source src="src/assets/video/bgUs.mp4" type="video/mp4" />
+      <source src={videoUs} type="video/mp4" />
       Tu navegador no soporta videos HTML5.
     </video>
 
@@ -38,7 +40,7 @@ const VideoUs = () => (
     {/* Imagen de la derecha */}
     <div className="absolute bottom-0 w-full flex justify-center md:justify-end">
       <img
-        src="./src/assets/imgUS.png"
+        src={imageUs}
         className="h-auto object-contain z-10 md:object-cover md:h-150 " // Asegúrate de que la imagen esté por encima del video
         alt="Imagen de Paramo"
       />

@@ -19,12 +19,12 @@ export default function ParamoProgramming() {
     mission: {
       title: "Misión",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet libero eros. Sed sit amet libero eros. Sed sit amet libero eros.",
+        "En ParamoPrograming, nos especializamos en llevar a las empresas al siguiente nivel mediante el desarrollo de páginas web a la medida, innovadoras y personalizadas. Nuestro compromiso es ofrecer soluciones digitales eficientes y adaptadas a las necesidades de cada cliente, combinando creatividad, tecnología de vanguardia y un enfoque estratégico para potenciar su presencia en el mundo digital.",
     },
     vision: {
       title: "Visión",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet libero eros. Sed sit amet libero eros. Sed sit amet libero eros.",
+        "Ser la empresa líder en desarrollo web personalizado en Colombia, reconocida por nuestra excelencia, innovación y compromiso con el éxito de nuestros clientes. Aspiramos a transformar la forma en que las empresas interactúan con el mundo digital, creando experiencias únicas y funcionales que impulsen su crecimiento y competitividad en el mercado.",
     },
   };
 
@@ -89,7 +89,7 @@ export default function ParamoProgramming() {
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="text-lg text-center"
+              className="text-sm text-center"
             >
               {sections[activeSection].content}
             </motion.p>
