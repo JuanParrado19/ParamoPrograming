@@ -1,6 +1,6 @@
 import React from "react";
 import videoUs from "../assets/video/bgUs.mp4";
-import imageUs from "../assets/imgUS.png";
+import imageUs from "../assets/imgUs.png";
 
 const VideoUs = () => (
   <section
